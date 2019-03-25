@@ -1,5 +1,5 @@
 import onetimepad
-cipher = onetimepad.encrypt('Ashmita', 'thiskey')
+cipher = onetimepad.encrypt('Asmita', 'thiskey')
 print("Cipher text is ")
 print(cipher)
 print("Plain text is ")
