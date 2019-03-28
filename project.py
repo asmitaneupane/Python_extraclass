@@ -1,7 +1,9 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QComboBox, QDialog, QDialogButtonBox, QFormLayout, QGridLayout, QGroupBox, QHBoxLayout,QLabel, QLineEdit, QMenu, QMenuBar, QPushButton, QSpinBox, QTextEdit,QVBoxLayout
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtGui import QIcon
+
+import sys
  
 class App(QMainWindow):
  
@@ -13,17 +15,24 @@ class App(QMainWindow):
       self.width = 640
       self.height = 480
       self.initUI()
-   
+
+
    def initUI(self):
       self.setWindowTitle(self.title)
       self.setGeometry(self.left, self.top, self.width, self.height)
       self.statusBar().showMessage('Message in statusbar.')
-      button = QPushButton('PyQt5 button', self)
+      button = QPushButton('Click', self)
+      
       button.setToolTip('This is an example button')
       button.move(100,70)
       self.show()
+
+   pyqtSlot()
+   def on_click(self):
+      print('PyQt5 button click')
       
 if __name__ == '__main__':
    app = QApplication(sys.argv)
    ex = App()
-   sys.exit(app.exec_())
+   sys.exit(app.exec())
+   
